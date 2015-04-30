@@ -1,3 +1,6 @@
+# ignore temp rss result files
+feedspider/feedbot/result/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
