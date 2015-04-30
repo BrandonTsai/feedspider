@@ -11,7 +11,7 @@
 BOT_NAME = 'feedspider'
 
 RANDOMIZE_DOWNLOAD_DELAY = True
-DOWNLOAD_DELAY = 30
+DOWNLOAD_DELAY = 5
 
 SPIDER_MODULES = ['feedspider.spiders']
 NEWSPIDER_MODULE = 'feedspider.spiders'
