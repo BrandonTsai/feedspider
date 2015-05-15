@@ -11,13 +11,11 @@
 BOT_NAME = 'feedspider'
 
 RANDOMIZE_DOWNLOAD_DELAY = True
-DOWNLOAD_DELAY = 5
+DOWNLOAD_DELAY = 30
 
 SPIDER_MODULES = ['feedspider.spiders']
 NEWSPIDER_MODULE = 'feedspider.spiders'
 
-# Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'feedspider (+http://www.yourdomain.com)'
 
 DATABASE = {
     'drivername': 'postgres',

@@ -14,14 +14,12 @@ def get_urls():
 
     t = strftime('%Y_%m%d', localtime(time()))
     sourcefile = 'feedspider/feedbot/result/%s.json' % t
-    if os.path.isfile(sourcefile): 
+    if os.path.isfile(sourcefile):
         with open(sourcefile) as data_file:
             urls = json.load(data_file)
     else:
         urls = []
     return urls
-
-
 
 
 class NewsSpider(scrapy.Spider):
@@ -35,6 +33,5 @@ class NewsSpider(scrapy.Spider):
         item['link'] = response.url
         contentList = response.xpath('//p/text() | //p/a/text()').extract()
         item['content'] = ''.join(contentList)
-        #print "\n~~", item
+        # print "\n~~", item
         return item
-     

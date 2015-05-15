@@ -8,8 +8,11 @@
 from sqlalchemy.orm import sessionmaker
 from models import Articals, db_connect, create_articals_table
 
+
 class FeedspiderPipeline(object):
+
     """ Feedspider pipeline for storing scraped items in the database """
+
     def __init__(self):
         """
         Initializes database connection and sessionmaker.

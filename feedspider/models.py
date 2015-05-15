@@ -1,10 +1,12 @@
-from sqlalchemy import create_engine, Column, Integer, String, UnicodeText, Date
+from sqlalchemy import create_engine, Column
+from sqlalchemy import Integer, String, UnicodeText, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.engine.url import URL
 
 import settings
 
 DeclarativeBase = declarative_base()
+
 
 def db_connect():
     """
@@ -19,6 +21,7 @@ def create_articals_table(engine):
 
 
 class Sources(DeclarativeBase):
+
     """Sqlalchemy articals model"""
     __tablename__ = "sources"
 
@@ -29,13 +32,11 @@ class Sources(DeclarativeBase):
 
 
 class Articals(DeclarativeBase):
+
     """Sqlalchemy articals model"""
     __tablename__ = "articals"
 
     id = Column(Integer, primary_key=True)
-    #source_id = Column('source_id', Integer)
     title = Column('title', UnicodeText)
     link = Column('link', String)
-    #date = Column('date', Date)
-    #summary = Column('content', UnicodeText)
     content = Column('content', UnicodeText)
